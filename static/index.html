@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L.A.S.T. Converter | Selenium to Playwright</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>B.L.A.S.T. 🚀</h1>
+            <p>Selenium Java to Playwright JS/TS Converter</p>
+        </header>
+
+        <main>
+            <div class="workspace">
+                <div class="glass-card input-section">
+                    <div class="card-header">
+                        <span>Selenium Java (Input)</span>
+                        <div class="controls">
+                            <select id="targetLang">
+                                <option value="typescript">TypeScript</option>
+                                <option value="javascript">JavaScript</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea id="sourceCode" placeholder="Paste your Selenium TestNG code here..."></textarea>
+                </div>
+
+                <div class="actions">
+                    <button id="convertBtn">
+                        <span class="btn-text">Convert</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+
+                <div class="glass-card output-section">
+                    <div class="card-header">
+                        <span>Playwright Output</span>
+                        <button id="copyBtn">Copy Code</button>
+                    </div>
+                    <div id="outputContainer" class="code-display">
+                        <pre><code id="outputCode">Generated code will appear here...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by B.L.A.S.T Protocol & Local LLM</p>
+        </footer>
+    </div>
+
+    <div id="loader" class="hidden">
+        <div class="spinner"></div>
+        <p>Crunching code with Local LLM...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
