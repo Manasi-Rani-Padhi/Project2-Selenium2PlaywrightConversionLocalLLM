@@ -11,17 +11,17 @@ The system follows the **A.N.T. 3-Layer Architecture** (Architecture, Navigation
 
 ```mermaid
 graph TD
-    subgraph Frontend (Stylize)
+    subgraph "Frontend (Stylize)"
         A[Glassmorphic UI] -->|Post Request| B[FastAPI Backend]
     end
 
-    subgraph Backend (Architect)
+    subgraph "Backend (Architect)"
         B --> C{Converter Orchestrator}
         C --> D[Java Parser SOP]
         C --> E[Playwright Gen SOP]
     end
 
-    subgraph Execution (Tools)
+    subgraph "Execution (Tools)"
         C --> F[Ollama Client]
         F --> G[(Local LLM - Qwen/Llama)]
     end
